@@ -1,0 +1,22 @@
+diff -ura a/FreeFileSync/Source/Makefile b/FreeFileSync/Source/Makefile
+--- a/FreeFileSync/Source/Makefile	2018-03-09 16:02:53.000000000 +0100
++++ b/FreeFileSync/Source/Makefile	2018-03-20 13:21:21.918514649 +0100
+@@ -90,6 +90,7 @@
+ CPP_LIST+=../../wx+/popup_dlg.cpp
+ CPP_LIST+=../../wx+/popup_dlg_generated.cpp
+ CPP_LIST+=../../wx+/zlib_wrap.cpp
++CPP_LIST+=../../xBRZ/src/xbrz.cpp
+ 
+ OBJECT_LIST = $(CPP_LIST:%.cpp=../Obj/FFS_GCC_Make_Release/ffs/src/%.o)
+ 
+diff -ura a/FreeFileSync/Source/RealTimeSync/Makefile b/FreeFileSync/Source/RealTimeSync/Makefile
+--- a/FreeFileSync/Source/RealTimeSync/Makefile	2018-03-09 16:02:53.000000000 +0100
++++ b/FreeFileSync/Source/RealTimeSync/Makefile	2018-03-20 13:21:35.126366356 +0100
+@@ -36,6 +36,7 @@
+ CPP_LIST+=../../../wx+/image_resources.cpp
+ CPP_LIST+=../../../wx+/popup_dlg.cpp
+ CPP_LIST+=../../../wx+/popup_dlg_generated.cpp
++CPP_LIST+=../../../xBRZ/src/xbrz.cpp
+ 
+ OBJECT_LIST=$(CPP_LIST:%.cpp=../../Obj/RTS_GCC_Make_Release/ffs/src/rts/%.o)
+ 

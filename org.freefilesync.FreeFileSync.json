@@ -50,8 +50,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.0/wxWidgets-3.1.0.tar.bz2",
-          "sha256": "e082460fb6bf14b7dd6e8ac142598d1d3d0b08a7b5ba402fdbf8711da7e66da8"
+          "url": "https://github.com/wxWidgets/wxWidgets/releases/download/v3.1.1/wxWidgets-3.1.1.tar.bz2",
+          "sha256": "c925dfe17e8f8b09eb7ea9bfdcfcc13696a3e14e92750effd839f5e10726159e"
         },
         {  /* this is supposed to fix building on aarch64 */
           "type": "script",
@@ -84,8 +84,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.freefilesync.org/download/FreeFileSync_9.8_Source.zip",
-          "sha256": "77a59586284a518d6df6c0cc934c3efa434f247acce70452ab9fe37e7747b96d",
+          "url": "https://www.freefilesync.org/download/FreeFileSync_9.9_Source.zip",
+          "sha256": "43edd3c8546bd5a44c5d353811389a68b148f0655c006c13f4357f3579b9a970",
           "strip-components": 0
         },
         {
@@ -97,6 +97,25 @@
           "type": "patch",
           "path": "patch02-noupdatecheck.patch",
           "strip-components": 2
+        },
+        {
+          "type": "archive",
+          "url": "https://cfhcable.dl.sourceforge.net/project/xbrz/xBRZ/xBRZ_1.6.zip",
+          "dest": "xBRZ/src",
+          "sha256": "8d51e52a9264d09117cf434b7fcb46a17ee4285a00432554ba47fa86ac4511ce",
+          "strip-components": 0
+        },
+        {
+          "type": "patch",
+          "path": "xbrz.patch",
+          "strip-components": 1
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "# mkdir ../../xBRZ/src/",
+            "# mv ../../{xbrz_config.h,xbrz.cpp,xbrz.h,xbrz_tools.h} ../../xBRZ/src/"
+          ]
         },
         {
           "type": "file",
